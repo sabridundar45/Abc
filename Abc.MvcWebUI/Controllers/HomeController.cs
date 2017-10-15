@@ -19,7 +19,7 @@ namespace Abc.MvcWebUI.Controllers
 
         public ActionResult Details(int id)
         {
-            return View(_context.Products.Where(i => i.Id == id).FirstOrDefault());
+            return View(_context.Products.FirstOrDefault(i => i.Id == id));
         }
 
         public ActionResult List()
